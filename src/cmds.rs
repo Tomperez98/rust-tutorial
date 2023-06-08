@@ -8,6 +8,7 @@ pub enum Mode {
 #[derive(Args)]
 pub struct Greet {
     #[arg(short = 'm')]
+    #[arg(value_enum, default_value_t = Mode::Quiet)]
     pub mode: Mode,
     pub name: String,
 }
