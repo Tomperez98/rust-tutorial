@@ -14,16 +14,9 @@ pub struct Greet {
     pub name: String,
 }
 
-#[derive(Args)]
-pub struct GuessNumber {
-    pub max_number: u8,
-}
 #[derive(Subcommand)]
 pub enum SubCommands {
     Greet(Greet),
-    GuessNumber(GuessNumber),
-    Generics,
-    Traits,
-    Ownership,
-    Collections,
+    TwoSum,
+    JewelsAndStones,
 }
