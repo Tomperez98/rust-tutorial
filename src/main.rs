@@ -1,7 +1,11 @@
 use std::io;
 
-use clap::{command, Parser};
 mod cmds;
+mod generics;
+mod ownership;
+mod traits;
+use clap::{command, Parser};
+mod collections;
 use rand::{self, Rng};
 #[derive(Parser)]
 #[command(name = "Rust Tutorial")]
@@ -56,5 +60,9 @@ fn main() {
     match &cli.sub_commands {
         cmds::SubCommands::Greet(greet) => execute_greet(&greet.name, &greet.mode),
         cmds::SubCommands::GuessNumber(guess_number) => guessing_game(guess_number.max_number),
+        cmds::SubCommands::Generics => generics::execute(),
+        cmds::SubCommands::Traits => traits::execute(),
+        cmds::SubCommands::Ownership => ownership::execute(),
+        cmds::SubCommands::Collections => collections::execute(),
     }
 }
