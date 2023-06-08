@@ -1,8 +1,7 @@
 use clap::{Args, Subcommand, ValueEnum};
-#[derive(ValueEnum, Clone, Default)]
+#[derive(ValueEnum, Clone)]
 pub enum Mode {
     Loud,
-    #[default]
     Quiet,
 }
 #[derive(Args)]
