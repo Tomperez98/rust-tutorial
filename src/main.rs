@@ -43,9 +43,11 @@ fn guessing_game(max_number: u8) {
 }
 
 fn execute_greet(name: &str, mode: &cmds::Mode) {
+    let mut greet = "Hi ".to_owned();
+    greet.push_str(name);
     match mode {
-        cmds::Mode::Quiet => println!("hi {}", name.to_lowercase()),
-        cmds::Mode::Loud => println!("HI {}", name.to_uppercase()),
+        cmds::Mode::Quiet => println!("{}", greet.to_lowercase()),
+        cmds::Mode::Loud => println!("{}", greet.to_uppercase()),
     }
 }
 fn main() {
