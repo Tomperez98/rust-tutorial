@@ -1,6 +1,10 @@
 mod base;
 mod cmds;
+mod contains_duplicates;
 mod jewels_and_stones;
+mod kids_with_candies;
+mod num_of_good_pairs;
+mod top_k_frequent;
 mod two_sum;
 use clap::{command, Parser};
 
@@ -42,6 +46,32 @@ fn main() {
                 "{:?}",
                 base::Solution::num_jewels_in_stones("z".to_owned(), "ZZ".to_owned())
             );
+        }
+        cmds::SubCommands::NumGoodPairs => {
+            println!(
+                "{:?}",
+                base::Solution::num_identical_pairs(vec![1, 2, 3, 1, 1, 3])
+            );
+            println!(
+                "{:?}",
+                base::Solution::num_identical_pairs(vec![1, 1, 1, 1])
+            );
+            println!("{:?}", base::Solution::num_identical_pairs(vec![1, 2, 3]));
+        }
+        cmds::SubCommands::KidsWithCandies => {
+            println!(
+                "{:?}",
+                base::Solution::kids_with_candies(vec![2, 3, 5, 1, 3], 3)
+            )
+        }
+        cmds::SubCommands::ContainsDuplicates => {
+            println!("{:?}", base::Solution::contains_duplicate(vec![1, 2, 3, 1]))
+        }
+        cmds::SubCommands::TopKFrequent => {
+            println!(
+                "{:?}",
+                base::Solution::top_k_frequent(vec![1, 1, 1, 2, 2, 3], 2)
+            )
         }
     }
 }

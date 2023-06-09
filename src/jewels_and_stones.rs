@@ -6,7 +6,7 @@ impl Solution {
     pub fn num_jewels_in_stones(jewels: String, stones: String) -> i32 {
         let set_jewels: HashSet<char> = jewels.chars().collect();
         let mut count_of_stones: HashMap<char, i32> = HashMap::new();
-        for stone in stones.chars().into_iter() {
+        for stone in stones.chars() {
             match count_of_stones.get(&stone) {
                 None => {
                     count_of_stones.insert(stone, 1);
@@ -24,7 +24,7 @@ impl Solution {
                 Some(num) => number_of_jewels += num,
             }
         }
-        return number_of_jewels;
+        number_of_jewels
     }
 }
 

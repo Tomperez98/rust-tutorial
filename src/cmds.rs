@@ -19,4 +19,8 @@ pub enum SubCommands {
     Greet(Greet),
     TwoSum,
     JewelsAndStones,
+    NumGoodPairs,
+    KidsWithCandies,
+    ContainsDuplicates,
+    TopKFrequent,
 }

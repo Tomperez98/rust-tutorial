@@ -7,7 +7,7 @@ impl Solution {
         let mut x: HashMap<i32, i32> = HashMap::new();
         for (idx, num) in nums.iter().enumerate() {
             let rem = target - num;
-            match x.get(&num) {
+            match x.get(num) {
                 None => {
                     x.insert(rem, idx as i32);
                 }
