@@ -23,4 +23,8 @@ pub enum SubCommands {
     KidsWithCandies,
     ContainsDuplicates,
     TopKFrequent,
+    RemoveDuplicatesSortedArray,
+    ApplyOperations,
+    MoveZeroes,
+    LengthOfLastWord,
 }

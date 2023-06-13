@@ -1,13 +1,16 @@
+mod apply_operations;
 mod base;
 mod cmds;
 mod contains_duplicates;
 mod jewels_and_stones;
 mod kids_with_candies;
+mod length_last_word;
+mod move_zeroes;
 mod num_of_good_pairs;
+mod remove_duplicates_sorted_array;
 mod top_k_frequent;
 mod two_sum;
 use clap::{command, Parser};
-
 #[derive(Parser)]
 #[command(name = "Rust Tutorial")]
 #[command(author = "Tomas Perez")]
@@ -71,6 +74,30 @@ fn main() {
             println!(
                 "{:?}",
                 base::Solution::top_k_frequent(vec![1, 1, 1, 2, 2, 3], 2)
+            )
+        }
+        cmds::SubCommands::RemoveDuplicatesSortedArray => {
+            println!(
+                "{:?}",
+                base::Solution::remove_duplicates(&mut vec![1, 1, 2])
+            )
+        }
+        cmds::SubCommands::ApplyOperations => {
+            println!(
+                "{:?}",
+                base::Solution::apply_operations(vec![1, 2, 2, 1, 1, 0])
+            )
+        }
+        cmds::SubCommands::MoveZeroes => {
+            println!(
+                "{:?}",
+                base::Solution::move_zeroes(&mut vec![0, 1, 0, 3, 12])
+            )
+        }
+        cmds::SubCommands::LengthOfLastWord => {
+            println!(
+                "{:?}",
+                base::Solution::length_of_last_word("luffy is still joyboy".to_owned())
             )
         }
     }
