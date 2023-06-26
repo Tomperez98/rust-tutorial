@@ -1,13 +1,17 @@
 mod apply_operations;
+mod arithmetic_triplets;
 mod base;
 mod cmds;
 mod contains_duplicates;
+mod destination_city;
+mod index_first_ocurrence;
 mod jewels_and_stones;
 mod kids_with_candies;
 mod length_last_word;
 mod move_zeroes;
 mod num_of_good_pairs;
 mod remove_duplicates_sorted_array;
+mod smallest_even_multiple;
 mod top_k_frequent;
 mod two_sum;
 use clap::{command, Parser};
@@ -100,5 +104,21 @@ fn main() {
                 base::Solution::length_of_last_word("luffy is still joyboy".to_owned())
             )
         }
+        cmds::SubCommands::DestinationCity => {
+            let cities: Vec<Vec<String>> = vec![
+                vec!["B".to_owned(), "C".to_owned()],
+                vec!["D".to_owned(), "B".to_owned()],
+                vec!["C".to_owned(), "A".to_owned()],
+            ];
+            println!("{:?}", base::Solution::dest_city(cities));
+        }
+        cmds::SubCommands::IndexFirstOcurrence => {
+            let found = base::Solution::str_str("sadbutsad".to_owned(), "sad".to_owned());
+            println!("{:?}", found)
+        }
+        cmds::SubCommands::SmallestEvenMultiple => {
+            println!("{:?}", base::Solution::smallest_even_multiple(10))
+        }
+        cmds::SubCommands::ArithmeticTriplets => {}
     }
 }

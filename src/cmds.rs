@@ -27,4 +27,8 @@ pub enum SubCommands {
     ApplyOperations,
     MoveZeroes,
     LengthOfLastWord,
+    DestinationCity,
+    IndexFirstOcurrence,
+    SmallestEvenMultiple,
+    ArithmeticTriplets,
 }

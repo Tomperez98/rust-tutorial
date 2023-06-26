@@ -14,6 +14,6 @@ impl Solution {
                 nums[i] = nums[j];
             }
         }
-        return (i + 1) as i32;
+        (i + 1) as i32
     }
 }

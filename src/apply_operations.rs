@@ -21,7 +21,7 @@ impl Solution {
         for _ in 0..zeros {
             output.push(0)
         }
-        return output;
+        output
     }
 }
 
