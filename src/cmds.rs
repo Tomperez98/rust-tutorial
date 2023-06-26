@@ -31,4 +31,5 @@ pub enum SubCommands {
     IndexFirstOcurrence,
     SmallestEvenMultiple,
     ArithmeticTriplets,
+    SortThePeople,
 }

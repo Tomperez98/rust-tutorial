@@ -12,6 +12,7 @@ mod move_zeroes;
 mod num_of_good_pairs;
 mod remove_duplicates_sorted_array;
 mod smallest_even_multiple;
+mod sort_the_people;
 mod top_k_frequent;
 mod two_sum;
 use clap::{command, Parser};
@@ -119,6 +120,20 @@ fn main() {
         cmds::SubCommands::SmallestEvenMultiple => {
             println!("{:?}", base::Solution::smallest_even_multiple(10))
         }
-        cmds::SubCommands::ArithmeticTriplets => {}
+        cmds::SubCommands::ArithmeticTriplets => {
+            println!(
+                "{:?}",
+                base::Solution::arithmetic_triplets(vec![0, 1, 4, 6, 7, 10], 3)
+            )
+        }
+        cmds::SubCommands::SortThePeople => {
+            println!(
+                "{:?}",
+                base::Solution::sort_people(
+                    vec!["Mary".to_owned(), "John".to_owned(), "Emma".to_owned()],
+                    vec![180, 165, 170]
+                )
+            )
+        }
     }
 }
