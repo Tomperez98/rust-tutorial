@@ -15,6 +15,8 @@ mod smallest_even_multiple;
 mod sort_the_people;
 mod top_k_frequent;
 mod two_sum;
+mod unequal_triplets;
+
 use clap::{command, Parser};
 #[derive(Parser)]
 #[command(name = "Rust Tutorial")]
@@ -133,6 +135,12 @@ fn main() {
                     vec!["Mary".to_owned(), "John".to_owned(), "Emma".to_owned()],
                     vec![180, 165, 170]
                 )
+            )
+        }
+        cmds::SubCommands::UnequalTriplets => {
+            println!(
+                "{:?}",
+                base::Solution::unequal_triplets(vec![4, 4, 2, 4, 3])
             )
         }
     }

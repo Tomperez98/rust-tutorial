@@ -32,4 +32,5 @@ pub enum SubCommands {
     SmallestEvenMultiple,
     ArithmeticTriplets,
     SortThePeople,
+    UnequalTriplets,
 }
